@@ -17,15 +17,22 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
         rm -rf E:/Setup/Testing_Software_New/Testing_Software_New/XC100
         cp -r C:/Users/USER/source/repos/Testing_Software_New/Testing_Software_New/bin/Debug/XC100 E:/Setup/Testing_Software_New/Testing_Software_New
 	
+	# 更新LC100 apollo
+        rm -rf E:/Setup/Testing_Software_New/Testing_Software_New/LC100
+        cp -r C:/Users/USER/source/repos/Testing_Software_New/Testing_Software_New/bin/Debug/LC100 E:/Setup/Testing_Software_New/Testing_Software_New
+
 	# 更新語言檔
-	cp -r C:/Users/USER/source/repos/Testing_Software_New/Testing_Software_New/bin/Debug/zh-Hans E:/Setup/Testing_Software_New/Testing_Software_New/zh-Hans
-	cp -r C:/Users/USER/source/repos/Testing_Software_New/Testing_Software_New/bin/Debug/zh-Hant E:/Setup/Testing_Software_New/Testing_Software_New/zh-Hant
+	cp -r C:/Users/USER/source/repos/Testing_Software_New/Testing_Software_New/bin/Debug/zh-Hans E:/Setup/Testing_Software_New/Testing_Software_New
+	cp -r C:/Users/USER/source/repos/Testing_Software_New/Testing_Software_New/bin/Debug/zh-Hant E:/Setup/Testing_Software_New/Testing_Software_New
 
 	# 更新address
 	cp C:/Users/USER/source/repos/Testing_Software_New/Testing_Software_New/bin/Debug/ADDRESS_WORD.csv E:/Setup/Testing_Software_New/Testing_Software_New/ADDRESS_WORD.csv
 
 	# 更新電流平均
         cp C:/Users/USER/source/repos/Testing_Software_New/Testing_Software_New/bin/Debug/CURRENT_LIMIT.csv E:/Setup/Testing_Software_New/Testing_Software_New/CURRENT_LIMIT.csv
+
+	# 更新dll
+        cp C:/Users/USER/source/repos/Testing_Software_New/Testing_Software_New/bin/Debug/*.dll E:/Setup/Testing_Software_New/Testing_Software_New/
 
 	# 更新exe
         cp C:/Users/USER/source/repos/Testing_Software_New/Testing_Software_New/bin/Debug/Testing_Software_New.exe E:/Setup/Testing_Software_New/Testing_Software_New/Testing_Software_New.exe
@@ -39,7 +46,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 
          # 壓縮zip
         cd E:/Setup/Testing_Software_New
-        zip -r -X $(date '+%y%m%d%H%M')_Testing_Software_New_v"$appVersion".zip $setupFileName Testing_Software_New版本履歷.xlsx
+        zip -r -X $(date '+%y%m%d%H%M')_新版測試機_v"$appVersion".zip $setupFileName Testing_Software_New版本履歷.xlsx
 
         # 移除暫存檔
         rm ./Testing_Software_New版本履歷.xlsx

@@ -30,7 +30,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 
 	 # 壓縮zip
         cd E:/Setup/Toyo_Simple_Detection
-        zip -r -X $(date '+%y%m%d%H%M')_Toyo_Simple_Detection_v"$appVersion".zip $setupFileName Toyo_Simple_Detection版本履歷.xlsx
+        zip -r -X $(date '+%y%m%d%H%M')_荷重軟體_v"$appVersion".zip $setupFileName Toyo_Simple_Detection版本履歷.xlsx
 
 	# 移除暫存檔
         rm ./Toyo_Simple_Detection版本履歷.xlsx

@@ -26,8 +26,8 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
         	fi
 
 		# 更新LC100 lang
-		rm -rf E:/Setup/Oscilloscope/Oscilloscope/LC100
-		cp -r $path/LC100 E:/Setup/Oscilloscope/Oscilloscope/LC100
+		# rm -rf E:/Setup/Oscilloscope/Oscilloscope/LC100
+		# cp -r $path/LC100 E:/Setup/Oscilloscope/Oscilloscope/LC100
 
 		# 更新.exe
 	        cp $SourceExeFile E:/Setup/Oscilloscope/Oscilloscope/Oscilloscope.exe
@@ -43,13 +43,13 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 
 	        # 壓縮zip
 	        cd E:/Setup/Oscilloscope
-        	zip -r -X $(date '+%y%m%d%H%M')_Oscilloscope_v"$appVersion".zip $setupFileName Oscilloscope版本履歷.xlsx
+        	zip -r -X $(date '+%y%m%d%H%M')_示波器_v"$appVersion".zip $setupFileName Oscilloscope版本履歷.xlsx
 
 	        # 移除暫存檔
 	        rm ./Oscilloscope版本履歷.xlsx
 	        rm $setupFileName
 
-	        explorer .
+	        #explorer .
 
 	elif [ "${1}" == "dll" ]; then
 		# 判斷是否存在.dll
@@ -62,10 +62,10 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 	        cp C:/Users/USER/source/repos/Oscilloscope/Oscilloscope/bin/Debug/Oscilloscope版本履歷.xlsx E:/Setup/Oscilloscope/Oscilloscope版本履歷.xlsx
 
 		# 壓縮zip
-		cd C: && cd $path && zip -r -X Oscilloscope.dll.zip LC100 Oscilloscope.dll Oscilloscope.xml Oscilloscope版本履歷.xlsx
+		cd C: && cd $path && zip -r -X Oscilloscope.dll.zip Oscilloscope.dll Oscilloscope.xml Oscilloscope版本履歷.xlsx
 
 		# 改檔名
-		mv $path/Oscilloscope.dll.zip E:/Setup/Oscilloscope/$(date '+%y%m%d%H%M')_Oscilloscope_v$(sigcheck -nobanner -n $SourceDllFile).dll.zip
+		mv $path/示波器.dll.zip E:/Setup/Oscilloscope/$(date '+%y%m%d%H%M')_Oscilloscope_v$(sigcheck -nobanner -n $SourceDllFile).dll.zip
 	else
         	echo "Wrong param [winform | dll]"
 	        exit 1

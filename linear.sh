@@ -37,7 +37,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 
 	# 壓縮zip
 	cd E:/Setup/LinearMotorSelectionSoftware
-	zip -r -X $(date '+%y%m%d%H%M')_LinearMotorSelectionSoftware_v"$appVersion".zip $setupFileName LinearMotorSelectionSoftware版本履歷.xlsx
+	zip -r -X $(date '+%y%m%d%H%M')_線馬選型軟體_v"$appVersion".zip $setupFileName LinearMotorSelectionSoftware版本履歷.xlsx
 
 	# 移除暫存檔
 	rm ./LinearMotorSelectionSoftware版本履歷.xlsx

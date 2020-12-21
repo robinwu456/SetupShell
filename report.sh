@@ -49,7 +49,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 
          # 壓縮zip
         cd E:/Setup/TestingReportAnalysis
-        zip -r -X $(date '+%y%m%d%H%M')_TestingReportAnalysis_v"$appVersion".zip $setupFileName TestingReportAnalysis版本履歷.xlsx
+        zip -r -X $(date '+%y%m%d%H%M')_報表軟體_v"$appVersion".zip $setupFileName TestingReportAnalysis版本履歷.xlsx
 
         # 移除暫存檔
         rm ./TestingReportAnalysis版本履歷.xlsx
