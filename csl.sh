@@ -20,6 +20,9 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 
 	# 更新語言包(TW)
         cp -r 'C:/Users/USER/source/repos/ToyoSingle-CSL Software/ToyoSingle-CSL Software/bin/Debug/zh-TW' 'E:/Setup/ToyoSingle-CSL Software/ToyoSingle-CSL Software'
+	
+	# 更新address
+        cp 'C:/Users/USER/source/repos/ToyoSingle-CSL Software/ToyoSingle-CSL Software/bin/Debug/ADDRESS_WORD.csv' 'E:/Setup/ToyoSingle-CSL Software/ToyoSingle-CSL Software/ADDRESS_WORD.csv'
 
         # 包裝安裝檔
         cd E: && cd $innoCompilerPath

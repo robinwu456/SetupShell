@@ -3,7 +3,14 @@ exeFile=Testing_Software_New.exe
 appVersion=$(sigcheck -nobanner -n $path/$exeFile)
 innoCompilerPath=E:/Setup/InnoSetupPortableUnicode/App/InnoSetup
 issFileName=E:/Setup/CompileFile/Testing_Software_New.iss
+
 setupFileName=Testing_Software_New_v"$appVersion"_Setup.exe
+allVersion=$appVersion
+arrayVersion=($(echo "$allVersion" | tr '_' '\n'))
+
+if [[ ${#arrayVersion[@]} == 2 ]]; then
+	setupFileName=Testing_Software_New_v"${arrayVersion[0]}"_Setup.exe
+fi
 
 #詢問是否更新版本履歷
 read -p "是否已更新版本履歷？[Y/N]" -n 1 -r

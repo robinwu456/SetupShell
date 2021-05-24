@@ -16,7 +16,14 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 	# 更新XC100 apollo
 	rm -rf E:/Setup/Toyo_Simple_Detection/Toyo_Simple_Detection/XC100
 	cp -r C:/Users/USER/source/repos/Toyo_Simple_Detection/Toyo_Simple_Detection/bin/Debug/XC100 E:/Setup/Toyo_Simple_Detection/Toyo_Simple_Detection
+
+	# 更新LC100 apollo
+        rm -rf E:/Setup/Toyo_Simple_Detection/Toyo_Simple_Detection/LC100
+        cp -r C:/Users/USER/source/repos/Toyo_Simple_Detection/Toyo_Simple_Detection/bin/Debug/LC100 E:/Setup/Toyo_Simple_Detection/Toyo_Simple_Detection
 	
+	# 更新dll
+        cp C:/Users/USER/source/repos/Toyo_Simple_Detection/Toyo_Simple_Detection/bin/Debug/*.dll E:/Setup/Toyo_Simple_Detection/Toyo_Simple_Detection/
+
 	cp C:/Users/USER/source/repos/Toyo_Simple_Detection/Toyo_Simple_Detection/bin/Debug/ADDRESS_WORD.csv E:/Setup/Toyo_Simple_Detection/Toyo_Simple_Detection/ADDRESS_WORD.csv
 
 	cp C:/Users/USER/source/repos/Toyo_Simple_Detection/Toyo_Simple_Detection/bin/Debug/Toyo_Simple_Detection.exe E:/Setup/Toyo_Simple_Detection/Toyo_Simple_Detection/Toyo_Simple_Detection.exe
