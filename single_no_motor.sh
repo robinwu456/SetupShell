@@ -1,6 +1,6 @@
 path=C:/Users/USER/source/repos/SingleAxis_NoMotor_SelectionSoftware/SingleAxis_NoMotor_SelectionSoftware/bin/Debug
 prxFile=PRX
-exeFile=SingleAxis_NoMotor_SelectionSoftware.exe
+exeFile=不帶電選型軟體.exe
 innoCompilerPath=E:/Setup/InnoSetupPortableUnicode/App/InnoSetup
 issFileName=E:/Setup/CompileFile/SingleAxis_NoMotor_SelectionSoftware.iss
 appVersion=$(sigcheck -nobanner -n $path/$exeFile)
@@ -13,11 +13,11 @@ setupFileName=SingleAxis_NoMotor_SelectionSoftware_v"$appVersion"_Setup.exe
 #explorer .
 
 #詢問是否更新版本履歷
-read -p "是否已更新版本履歷？[Y/N]" -n 1 -r
+#read -p "是否已更新版本履歷？[Y/N]" -n 1 -r
 
-if [[ $REPLY =~ ^[Yy]$ ]]; then
+#if [[ $REPLY =~ ^[Yy]$ ]]; then
 	# 刪除Log
-	rm $path/$prxFile/Apollo.log
+	#rm $path/$prxFile/Apollo.log
 
 	# 移除目標PRX
 	rm -rf E:/Setup/SingleAxis_NoMotor_SelectionSoftware/SingleAxis_NoMotor_SelectionSoftware/PRX
@@ -26,7 +26,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 	cp -r $path/PRX E:/Setup/SingleAxis_NoMotor_SelectionSoftware/SingleAxis_NoMotor_SelectionSoftware
 
 	# 取代新的exe
-	cp $path/SingleAxis_NoMotor_SelectionSoftware.exe E:/Setup/SingleAxis_NoMotor_SelectionSoftware/SingleAxis_NoMotor_SelectionSoftware/SingleAxis_NoMotor_SelectionSoftware.exe
+	cp $path/不帶電選型軟體.exe E:/Setup/SingleAxis_NoMotor_SelectionSoftware/SingleAxis_NoMotor_SelectionSoftware/不帶電選型軟體.exe
 
 	# 更新dll
         cp $path/*.dll E:/Setup/SingleAxis_NoMotor_SelectionSoftware/SingleAxis_NoMotor_SelectionSoftware/
@@ -48,8 +48,8 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 
 	# 開啟包裝檔路徑
 	explorer .
-elif [[ $REPLY =~ ^[Nn]$ ]]; then
+#elif [[ $REPLY =~ ^[Nn]$ ]]; then
 	# 開啟版本履歷Excel
-	cd C: && cd $path && explorer SingleAxis_NoMotor_SelectionSoftware版本履歷.xlsx
-	exit 1
-fi
+#	cd C: && cd $path && explorer SingleAxis_NoMotor_SelectionSoftware版本履歷.xlsx
+#	exit 1
+#fi
