@@ -28,6 +28,10 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
         rm -rf E:/Setup/Testing_Software_New/Testing_Software_New/LC100
         cp -r C:/Users/USER/source/repos/Testing_Software_New/Testing_Software_New/bin/Debug/LC100 E:/Setup/Testing_Software_New/Testing_Software_New
 
+	# 更新SC100 apollo
+        rm -rf E:/Setup/Testing_Software_New/Testing_Software_New/SC100
+        cp -r C:/Users/USER/source/repos/Testing_Software_New/Testing_Software_New/bin/Debug/SC100 E:/Setup/Testing_Software_New/Testing_Software_New
+
 	# 更新語言檔
 	cp -r C:/Users/USER/source/repos/Testing_Software_New/Testing_Software_New/bin/Debug/zh-Hans E:/Setup/Testing_Software_New/Testing_Software_New
 	cp -r C:/Users/USER/source/repos/Testing_Software_New/Testing_Software_New/bin/Debug/zh-Hant E:/Setup/Testing_Software_New/Testing_Software_New
